@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cttn58.github.io/industry-information-hub/sitemap.xml
