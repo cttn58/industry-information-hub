@@ -1,2 +1,11 @@
-# industry-information-hub
-Collection of company product information websites, technical documentation, and customer-facing resources.
+# Industry Information Hub
+
+Industry Information Hub provides product information, technical specifications, FAQs, and support resources across a range of consumer and industrial sectors.
+
+Featured brands include:
+
+- AquaSteel Drinkware
+- Leafora Laboratories
+- Potato Foods International
+- Precision Peripherals Ltd
+- SonicWave Technologies
