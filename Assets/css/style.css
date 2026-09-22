@@ -284,6 +284,56 @@ img{
     border-bottom: 6px solid var(--primary-color);
 }
 
+.page-layout{
+    display:flex;
+    min-height:100vh;
+}
+main{
+    flex:1;
+    padding:60px;
+}
+.sidebar{
+    width:320px;
+    min-height:100vh;
+    background:white;
+    border-right:1px solid var(--border-color);
+    padding:25px;
+}
+.company-brand{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    padding:15px;
+    margin-bottom:30px;
+}
+.company-name{
+    font-size:38px;
+    line-height:1.1;
+}
+.vertical-nav{
+    display:flex;
+    flex-direction:column;
+    margin-top:30px;
+}
+.vertical-nav a{
+    text-decoration:none;
+    color:var(--primary-color);
+    font-size:16px;
+    font-weight:600;
+    padding:16px 20px;
+    border-left:5px solid transparent;
+    transition:0.2s ease;
+}
+.vertical-nav a:hover{
+    background-color:var(--primary-light);
+    border-left:5px solid var(--primary-color);
+}
+.vertical-nav a.active{
+    background-color:var(--primary-light);
+    border-left:5px solid var(--primary-color);
+}
+
 
 /* =========================================
    TABLES
@@ -337,6 +387,19 @@ table th {
     text-align:center;
     margin-bottom:30px;
 }
+.company-overview-top{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+.company-logo-side{
+    flex-shrink:0;
+}
+.company-logo-side img{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+}
 
 /* Featured Product */
 .featured-content{
@@ -380,6 +443,23 @@ table th {
     margin-bottom:15px;
 }
 
+/* AquaSteel unsigned homepage only */
+.bottle-home .featured-content{
+    display:flex;
+    flex-direction:row-reverse;
+    align-items:center;
+    gap:50px;
+}
+.bottle-home .featured-image{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.bottle-home .featured-image img{
+    width:550px;
+    height:auto;
+}
+
 
 /* =========================================
    ABOUT PAGE
@@ -404,6 +484,11 @@ table th {
 }
 .about-description h2{
     margin-top:0;
+}
+
+.bottle-about-image img{
+    width:550px;
+    height:auto;
 }
 
 
@@ -434,6 +519,18 @@ table th {
 }
 .spec-image img{
     border:1px solid var(--border-color);
+}
+
+.bottle-spec-image{
+    flex:0 0 550px;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+.bottle-spec-image img{
+    width:550px;
+    max-width:none;
+    height:auto;
 }
 
 /* Summary table */
@@ -470,6 +567,21 @@ table th {
     flex:1;
 }
 
+.bottle-feature-image{
+    flex:0 0 350px;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+.bottle-feature-image img{
+    width:350px !important;
+    max-width:350px !important;
+    height:auto;
+
+    border:1px solid var(--border-color);
+    border-radius:10px;
+}
 
 
 /* =========================================
@@ -561,6 +673,15 @@ footer p{
     object-fit:contain;
     display:block;
 }
+.footer-company{
+    max-width: 1000px;
+    margin: 20px auto;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+    text-align: center;
+}
+
 .cc-wrapper{
     position:relative;
     display:inline-block;
