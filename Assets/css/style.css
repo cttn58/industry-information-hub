@@ -549,6 +549,132 @@ table th {
     flex:1;
 }
 
+/* Supplementary company information */
+.supplementary-information{
+    padding:35px;
+    margin-top:50px;
+    background:linear-gradient(
+        135deg,
+        var(--primary-light),
+        #ffffff
+    );
+    border:1px solid var(--border-color);
+    border-radius:16px;
+}
+.supplementary-information > h2{
+    margin-bottom:30px;
+    padding-bottom:12px;
+    border-bottom:2px solid var(--primary-color);
+}
+.supplementary-information .highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:24px;
+}
+.supplementary-information .feature-highlight{
+    min-height:260px;
+    padding:26px;
+    background:#ffffff;
+    border:1px solid #e3e8e5;
+    border-left:5px solid var(--primary-color);
+    border-radius:12px;
+    box-shadow:var(--shadow-light);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+.supplementary-information .feature-highlight:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-hover);
+    border-color:var(--primary-color);
+}
+.supplementary-information .feature-highlight h3{
+    margin-bottom:14px;
+    padding-bottom:10px;
+    color:var(--primary-color);
+    font-size:21px;
+    line-height:1.35;
+    border-bottom:1px solid var(--primary-light);
+}
+.supplementary-information .feature-highlight p{
+    margin:0;
+    color:#4c4c4c;
+    font-size:15px;
+    line-height:1.75;
+    text-align:left;
+}
+
+/* Potato Foods supplementary section */
+.potato-supplementary{
+    position:relative;
+    overflow:hidden;
+}
+.potato-supplementary::before{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:180px;
+    height:180px;
+    background:var(--primary-light);
+    border-radius:0 0 0 100%;
+    opacity:0.7;
+    pointer-events:none;
+}
+.potato-supplementary > h2{
+    position:relative;
+    z-index:1;
+}
+.supplementary-featured{
+    position:relative;
+    z-index:1;
+    margin-bottom:24px;
+    padding:30px;
+    background:var(--primary-color);
+    color:#ffffff;
+    border-radius:12px;
+    box-shadow:var(--shadow-light);
+}
+.supplementary-featured > div{
+    max-width:950px;
+}
+.supplementary-featured h3{
+    margin:8px 0 12px;
+    color:#ffffff;
+    font-size:24px;
+}
+.supplementary-featured p{
+    margin:0;
+    color:#ffffff;
+    font-size:16px;
+    line-height:1.8;
+    text-align:left;
+}
+.supplementary-label{
+    display:inline-block;
+    padding:4px 10px;
+    color:var(--primary-color);
+    background:#ffffff;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+}
+.potato-supplementary .highlight-grid{
+    position:relative;
+    z-index:1;
+
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+}
+.potato-supplementary .feature-highlight{
+    min-height:245px;
+}
+.potato-supplementary .feature-highlight h3{
+    color:var(--primary-color);
+}
+
 
 /* =========================================
    FEATURES PAGE
@@ -566,10 +692,8 @@ table th {
 .feature-intro{
     flex:1;
 }
-
 .bottle-feature-image{
     flex:0 0 350px;
-
     display:flex;
     justify-content:flex-end;
     align-items:center;
@@ -578,7 +702,6 @@ table th {
     width:350px !important;
     max-width:350px !important;
     height:auto;
-
     border:1px solid var(--border-color);
     border-radius:10px;
 }
@@ -778,5 +901,41 @@ footer p{
     }
     .c2pa-badge{
         margin-top:8px;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .supplementary-information .highlight-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width:700px){
+    .supplementary-information{
+        padding:22px;
+    }
+    .supplementary-information .highlight-grid{
+        grid-template-columns:1fr;
+    }
+    .supplementary-information .feature-highlight{
+        min-height:auto;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .potato-supplementary .highlight-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width:700px){
+    .potato-supplementary .highlight-grid{
+        grid-template-columns:1fr;
+    }
+    .supplementary-featured{
+        padding:24px;
+    }
+    .potato-supplementary .feature-highlight{
+        min-height:auto;
     }
 }
